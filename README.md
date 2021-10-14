@@ -1,5 +1,19 @@
 # Mercury
 
+Il progetto ha i seguenti componenti:
+
+- [Mercury Timeseries Ingestor](https://github.com/FedericoSerini/bot)
+- [Mercury Trading Bot](https://github.com/FedericoSerini/bot)
+- [Mercury UI](https://github.com/FedericoSerini/bot)(?)
+- [Mercury API](https://github.com/FedericoSerini/bot)
+- [Mercury API Gateway](https://github.com/FedericoSerini/bot)
+- [Mercury ML Core](https://github.com/FedericoSerini/bot)
+- [Mercury Wallet Integration](https://github.com/FedericoSerini/bot)
+- [Mercury Big Data](https://github.com/FedericoSerini/bot)
+- [Mercury Fake Data Generator](https://github.com/FedericoSerini/bot)
+
+### Architettura
+
 L'architettura proposta nella fase 1 prevede 6 strati:
 
 - Ingestion: Tutto quello che riguarda la costruzione della base dati su cui si appoggia la piattaforma, nello stato iniziale si sfrutteranno i web socket messi a disposizione da Binance per quanto riguarda le timeseries di trading. Il tutto verrà caricato sulla base dati Cassandra mediante il message broker kafka che in questo caso svolgerà esclusivamente la funzione di motore di ingestione dati.
