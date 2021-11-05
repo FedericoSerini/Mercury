@@ -11,7 +11,8 @@ Il progetto ha i seguenti componenti:
 - [Mercury Wallet Integration](https://github.com/FedericoSerini/bot)
 - [Mercury Big Data](https://github.com/FedericoSerini/bot)
 - [Mercury Fake Data Generator](https://github.com/FedericoSerini/bot)
-
+- [Mercury Data Generator](https://github.com/FedericoSerini/bot)
+- [Mercury Sentiment Analysis Engine](https://github.com/FedericoSerini/bot)
 ### Architettura
 
 L'architettura proposta nella fase 1 prevede 6 strati:
@@ -28,7 +29,7 @@ L'architettura proposta nella fase 1 prevede 6 strati:
 
 ### Tech stack
 
-Linguaggi: Java/Go, Python, Javascript (Node.js)
+Linguaggi: Java, Go, Python, Javascript (Node.js)
 
 Database: Cassandra
 
