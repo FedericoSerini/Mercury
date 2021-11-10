@@ -2,17 +2,17 @@
 
 Il progetto ha i seguenti componenti:
 
-- [Mercury Timeseries Ingestor](https://github.com/FedericoSerini/bot)
-- [Mercury Trading Bot](https://github.com/FedericoSerini/bot)
-- [Mercury UI](https://github.com/FedericoSerini/bot)(?)
-- [Mercury API](https://github.com/FedericoSerini/bot)
-- [Mercury API Gateway](https://github.com/FedericoSerini/bot)
-- [Mercury ML Core](https://github.com/FedericoSerini/bot)
-- [Mercury Wallet Integration](https://github.com/FedericoSerini/bot)
-- [Mercury Big Data](https://github.com/FedericoSerini/bot)
-- [Mercury Fake Data Generator](https://github.com/FedericoSerini/bot)
-- [Mercury Data Generator](https://github.com/FedericoSerini/bot)
-- [Mercury Sentiment Analysis Engine](https://github.com/FedericoSerini/bot)
+- [Mercury Timeseries Ingestor]()
+- [Mercury Trading Bot]()
+- [Mercury UI]()
+- [Mercury API]()
+- [Mercury API Gateway]()
+- [Mercury ML Core]()
+- [Mercury Wallet Integration]()
+- [Mercury Big Data]()
+- [Mercury Fake Data Generator]()
+- [Mercury Data Analysis](https://github.com/FedericoSerini/mercury_data_analysis)
+- [Mercury Sentiment Analysis Engine]()
 ### Architettura
 
 L'architettura proposta nella fase 1 prevede 6 strati:
