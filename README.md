@@ -7,7 +7,7 @@ Il progetto ha i seguenti componenti:
 - [Mercury UI]()
 - [Mercury API]()
 - [Mercury API Gateway]()
-- [Mercury ML Core]()
+- [Mercury ML Core](https://github.com/FedericoSerini/mercury_ml_core)
 - [Mercury Wallet Integration]()
 - [Mercury Big Data]()
 - [Mercury Fake Data Generator]()
