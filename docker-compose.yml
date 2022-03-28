@@ -1,0 +1,70 @@
+version: '3.5'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: x]yeDq73z2#!YFD.
+      MYSQL_DATABASE: mercury
+    ports:
+      - "3306:3306"
+      
+  mercury-data-analysis-service:
+    build:
+      context: ./mercury_data_analysis
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    ports:
+      - "5000:5000"
+    volumes:
+      - mercury:/mercury
+
+  mercury-ml-core-service:
+    build:
+      context: ./mercury_ml_core
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    ports:
+      - "9999:9999"
+    links:
+      - rabbitmq:localhost
+    volumes:
+      - mercury:/mercury
+
+  mercury-crawler-service:
+    build:
+      context: ./mercury_crawler
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    ports:
+      - "8888:8888"
+    volumes:
+      - mercury:/mercury
+
+  mercury-orchestrator-service:
+    build:
+      context: ./orchestrator
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    volumes:
+      - mercury:/mercury
+
+
+volumes:
+  mercury:
